@@ -14,3 +14,19 @@ function palindrome(string){
   return reverseLine === string;
 }
 palindrome('топот');
+
+//Дополнительная задача
+function checkString (string){
+  let result = '';
+  string = string.toString().replaceAll(' ', '');
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] > 0) {
+      result += string[i];
+    }
+  }
+  if (result === '') {
+    result = NaN;
+  }
+  return Number(result);
+}
+checkString(-4);
