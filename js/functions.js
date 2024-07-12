@@ -1,22 +1,20 @@
 // Функция для проверки длины строки.
-function lengthChecks (string, maxLength){
-  return string.length <= maxLength;
-}
-lengthChecks('проверяемая строка', 20);
+const lengthChecks = (string, maxLength) => string.length <= maxLength;
+lengthChecks('Проверяемая строка', 10);
 
 // Функция для проверки, является ли строка палиндромом.
-function palindrome(string){
+const palindrome = (string) => {
   const normalLine = string.toLowerCase().replaceAll(' ','');
   let reverseLine = '';
   for (let i = normalLine.length - 1; i >= 0; i--){
     reverseLine += normalLine[i];
   }
   return reverseLine === string;
-}
+};
 palindrome('топот');
 
 //Дополнительная задача
-function checkString (string){
+const checkString = (string) => {
   let result = '';
   string = string.toString().replaceAll(' ', '');
   for (let i = 0; i < string.length; i++) {
@@ -28,5 +26,5 @@ function checkString (string){
     result = NaN;
   }
   return Number(result);
-}
+};
 checkString(-4);
